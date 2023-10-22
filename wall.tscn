@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfal4i4bxggap"]
+
+[ext_resource type="Texture2D" uid="uid://dmjd0n6ix1b1a" path="res://assets/thin-wall.svg" id="1_ckyni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3ipk"]
+size = Vector2(540, 2)
+
+[node name="Wall" type="StaticBody2D"]
+position = Vector2(574, 3)
+scale = Vector2(2.1341, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ckyni")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t3ipk")
+metadata/_edit_lock_ = true

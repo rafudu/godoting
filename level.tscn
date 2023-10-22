@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://t71l0sgbiga5"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_ng12l"]
+[ext_resource type="PackedScene" uid="uid://dduebs80oq5ne" path="res://player.tscn" id="1_u3bvg"]
+[ext_resource type="PackedScene" uid="uid://bwql7vqjw8d3b" path="res://ball.tscn" id="3_7c5fm"]
+[ext_resource type="PackedScene" uid="uid://dfal4i4bxggap" path="res://wall.tscn" id="5_p6a1b"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_ng12l")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1146.0
+offset_bottom = 646.0
+color = Color(0.0823529, 0.0823529, 0.109804, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_u3bvg")]
+position = Vector2(272, 172)
+motion_mode = 1
+
+[node name="Ball" parent="." instance=ExtResource("3_7c5fm")]
+unique_name_in_owner = true
+position = Vector2(117, 86)
+gravity_scale = 2.66454e-15
+
+[node name="Top" parent="." instance=ExtResource("5_p6a1b")]
+metadata/_edit_group_ = true
+
+[node name="Bottom" parent="." instance=ExtResource("5_p6a1b")]
+position = Vector2(522, 266)
+metadata/_edit_group_ = true
+
+[node name="Left" parent="." instance=ExtResource("5_p6a1b")]
+position = Vector2(2, 428)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Right" parent="." instance=ExtResource("5_p6a1b")]
+position = Vector2(356, 342)
+rotation = 1.5708
+metadata/_edit_group_ = true
